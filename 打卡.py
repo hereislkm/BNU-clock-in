@@ -14,14 +14,14 @@ def open():
     input = driver.find_elements_by_tag_name("input")
     time.sleep(3)
     if input[0].get_attribute("placeholder") == "账号":
-        input[0].send_keys("201822210009")
+        input[0].send_keys("学号")
         time.sleep(2)
-        input[1].send_keys("wslkm19950707")
+        input[1].send_keys("信息门户密码")
         time.sleep(2)
         driver.find_element_by_class_name("btn").click()
         time.sleep(10)
 
-    js = "var q=document.documentElement.scrollTop=800"  # javascript语句
+    js = "var q=document.documentElement.scrollTop=800"
     driver.execute_script(js)
     locs = driver.find_elements_by_tag_name("input")
     for loc in locs:
